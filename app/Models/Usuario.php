@@ -12,7 +12,7 @@ class Usuario extends Model implements Authenticatable
     use HasFactory;
 
     protected $table = "usuarios";
-    protected $fillable = ['login', 'password'];
+    protected $fillable = ['login', 'password', 'remember_token'];
     public $timestamps = false;
 
     public static function deletar($id)
@@ -37,10 +37,12 @@ class Usuario extends Model implements Authenticatable
 
     public function getRememberToken()
     {
+        return $this->remember_token;
     }
 
     public function setRememberToken($value)
     {
+        $this->remember_token = $value;
     }
 
     public function getRememberTokenName()
