@@ -33,7 +33,7 @@ Route::middleware(['auth'])->prefix("home")->name("home.")->group(
         Route::match(
             ['get', 'post'],
             '/',
-            [UsuarioController::class, 'index']
+            [FilmeController::class, 'index']
         )->name('index');
 
         // Usuarios
@@ -59,5 +59,26 @@ Route::middleware(['auth'])->prefix("home")->name("home.")->group(
             '/filmes',
             [FilmeController::class, 'listaCadastra']
         )->name('filmes');
+
+        // Chama home.filmes.filme
+        Route::match(
+            ['get', 'post'],
+            '/filmes/{slug}',
+            [FilmeController::class, 'info']
+        )->name('filmes.filme');
+
+        // Chama home.filmes.filme.edit
+        Route::match(
+            ['get', 'post'],
+            '/filmes/{slug}/edit',
+            [FilmeController::class, 'edit']
+        )->name('filmes.filme.edit');
+
+        // Chama home.filmes.filme.delete
+        Route::match(
+            ['get', 'post'],
+            '/filmes/{slug}/delete',
+            [FilmeController::class, 'delete']
+        )->name('filmes.filme.delete');
     }
 );

@@ -37,7 +37,7 @@
         <td>{{ $usuario->id }}</td>
         <td>{{ $usuario->login }}</td>
         <th>
-            <a href="<?= url('home/usuarios/' . $usuario->id . '/delete') ?> " class="text-danger ml-3"><i
+            <a href="{{ url('home/usuarios/' . $usuario->id . '/delete') }}" class="text-danger ml-3"><i
                     class="far fa-trash-alt fa-2x"></i></a>
         </th>
     </tr>

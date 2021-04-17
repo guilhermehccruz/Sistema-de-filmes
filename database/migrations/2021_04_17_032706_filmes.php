@@ -17,11 +17,11 @@ class Filmes extends Migration
             $table->id();
             $table->string('title')->unique();
             $table->text('synopsis');
-            $table->foreignId('category')->references('id')->on('usuarios');
+            $table->foreignId('category')->references('id')->on('categorias');
             $table->float('score');
             $table->date('release');
             $table->string('director');
-            $table->string('cover');
+            $table->string('cover')->default('');
         });
     }
 

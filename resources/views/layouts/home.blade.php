@@ -25,13 +25,13 @@
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <a class="ml-4 navbar-brand" href="{{ route('home.index') }}">Home</a>
+                    <button class="navbar-toggler mr-4" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('home.filmes') }}">Filmes</a>
