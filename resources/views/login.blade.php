@@ -35,10 +35,6 @@
                                 <input type="password" class="form-control rounded-left" placeholder="Senha"
                                     name="password" required>
                             </div>
-                            <div class="form-group">
-                                <button type="submit"
-                                    class="form-control btn btn-primary rounded submit px-3">Login</button>
-                            </div>
                             <div class="form-group d-md-flex">
                                 <div class="custom-control custom-checkbox mr-auto">
                                     <input type="checkbox" name="remember" id="remember" class="custom-control-input">
@@ -46,6 +42,10 @@
                                         class="checkbox-wrap checkbox-primary custom-control-label">Lembrar de mim
                                     </label>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit"
+                                    class="form-control btn btn-primary rounded submit px-3">Login</button>
                             </div>
                         </form>
                     </div>

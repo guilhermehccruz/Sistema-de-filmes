@@ -14,13 +14,16 @@ class UsuarioController extends Controller
 {
     public function login(Request $request)
     {
-        // $2y$10$dOScRLt0iaHwneIVII1TEO/owmkqk9wH5p2XYDnSDT4P7zTK0X8Ky
+        if (Auth::check()) {
+            return redirect()->route("home.index");
+        }
         $data = [];
         if ($request->isMethod("Post")) {
             $login = $request->input("login");
             $password = $request->input("password");
+            $remember = $request->input("remember");
 
-            if (Auth::attempt(["login" => $login, "password" => $password])) {
+            if (Auth::attempt(["login" => $login, "password" => $password], $remember)) {
                 return redirect()->route("home.index");
             } else {
                 $data["error"] = "Usuario ou senha invalidos.";
