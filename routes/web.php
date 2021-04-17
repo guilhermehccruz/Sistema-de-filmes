@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmeController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +36,8 @@ Route::middleware(['auth'])->prefix("home")->name("home.")->group(
             [UsuarioController::class, 'index']
         )->name('index');
 
-        // Chama home.usuarios.usuarios
+        // Usuarios
+        // Chama home.usuarios
         Route::match(
             ['get', 'post'],
             '/usuarios',
@@ -48,5 +50,14 @@ Route::middleware(['auth'])->prefix("home")->name("home.")->group(
             '/usuarios/{id}/delete',
             [UsuarioController::class, 'delete']
         )->name('usuarios.delete');
+
+
+        // Filmes
+        // Chama home.filmes
+        Route::match(
+            ['get', 'post'],
+            '/filmes',
+            [FilmeController::class, 'listaCadastra']
+        )->name('filmes');
     }
 );

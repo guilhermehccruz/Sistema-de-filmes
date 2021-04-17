@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste TI</title>
+    <title>Filmes</title>
 
     <!-- Boostrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -23,9 +23,9 @@
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ route('home.index') }}">Sistema Teste Ti</a>
+                    <a class="navbar-brand" href="{{ route('home.index') }}">Home</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -34,19 +34,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home.filmes') }}">Filmes</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('home.usuarios') }}">Usuários</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    blank
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">Novo</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="">Cadastrados</a>
-                                </div>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('sair') }}">Sair</a>
                             </li>

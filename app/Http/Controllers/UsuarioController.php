@@ -60,7 +60,7 @@ class UsuarioController extends Controller
             }
         }
         $data["usuarios"] = Usuario::all();
-        return view('usuarios/usuarios', $data);
+        return view('usuarios/index', $data);
     }
 
     public function delete(Request $request, $id)
