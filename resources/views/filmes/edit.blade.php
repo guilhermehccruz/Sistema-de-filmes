@@ -52,7 +52,7 @@
             <input value="{{ $filme->cover }}" type="file" name="cover" id="cover" accept="image/*">
         </div>
         <div class="form-group col-12 d-flex mt-3 justify-content-center">
-            <button type="submit" class="btn btn-primary col-md-6 col-lg-4">Cadastrar</button>
+            <button type="submit" class="btn btn-primary col-md-6 col-lg-4">Salvar</button>
         </div>
     </form>
 </div>
