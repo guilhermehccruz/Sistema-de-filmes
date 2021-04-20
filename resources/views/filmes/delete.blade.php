@@ -19,7 +19,7 @@
                 <h1 class="h3 mb-3">{{ $filme->title }}</h1>
             </div>
         </div>
-        <input type="submit" value="Apagar" class="btn btn-primary mt-2">
+        <input type="submit" value="Apagar" class="btn btn-primary mt-2 mb-4">
     </div>
 </form>
 
